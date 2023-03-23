@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data - Bejeweled Shop</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/formPago.css">
+</head>
+<body>
+    <div id="div-container">
+        <div id="div-header">
+            <header id="main-header">
+                <div id="div-titulo">
+                    <h1 class="titulo-header">Bejeweled Shop</h1>
+                </div>
+                <div id="div-li">
+                    <ul class="ul">
+                        <li class="li"><a class="a-li" href="artistas.html">Artists</a></li>
+                        <li class="li"><a class="a-li" href="productos.html">Merch</a></li>
+                        <li class="li"><a class="a-li" href="pedidos.html">Orders</a></li>
+                        <li class="li"><a class="a-li" id="a-contact" href="sobreBejeweled.html">About Us</a></li>
+                        
+                        <li class="li"><a class="a-li" id="cart-li" href="cart.html"><img id="cart-icon" src="assets/img/cart.png" alt=""><h6 class="circulo-cart" id="circulo-cart">1</h6></a></li>
+                    </ul>
+                    <form class="form" id="form-header" action="index.js">
+                        <div id="div-form">
+                            <input id="buscador" type="search" name="buscador" placeholder="Search">
+                            <img id="img" src="assets/img/icono buscar.png" alt="">
+                        </div>
+                        <input id="submit" type="submit" value="Search">
+                    </form>
+                    <div id="users-div" class="users-div">
+                        <img id="img-user" src="assets/img/users.png" alt="">
+                    </div>
+                </div>
+            </header>
+        </div>
+    </div>
+    <div id="cont-data-form">
+        <ul id="ul-user" class="ul-user">
+            <li class="li-user"><a href="profile.html">My Profile</a></li>
+            <li class="li-user"><a id="logout" href="">Log out</a></li>
+        </ul>
+        <div id="div-form-payment">
+            <div class="div-shipping">
+                <h1 class="h1-title-payment">Shipping address</h1>
+                <form action="">
+                    <label class="label" for="country">Country/region:</label><br>
+                    <input type="text" name="country" id="country" class="input" placeholder="Country/region" required><br>
+                    <label class="label" for="">Street and house number:</label><br>
+                    <input type="text" name="street" id="street" class="input" placeholder="Street and house number" required><br>
+                    <label class="label" for="postalcode">Postal code:</label>
+                    <label class="label label-m" for="city">City:</label>
+                    <label class="label label-f" for="state">State:</label><br>
+                    <input type="text" name="postalcode" id="postalcode" class="input input-g" placeholder="Postal code" required>
+                    <input type="text" name="city" id="city" class="input input-g" placeholder="City" required>
+                    <input type="text" name="state" id="state" class="input input-g input-gr" placeholder="State" required>
+                </form>
+            </div>
+            <div class="div-payment">
+                <h1 class="h1-title-payment">Payment method</h1>
+                <form action="">
+                    <label class="label" for="card">Credit/Debit card:</label><br>
+                    <div class="div-visa">
+                        <input type="text" name="card" id="card" class="input input-visa" placeholder="Ex: 5579 0830 23 45" required><br>
+                        <img class="img-visa" src="assets/img/visa.png" alt="">
+                    </div>
+                    <label class="label" for="month">Month:</label>
+                    <label class="label label-m" for="year">Year:</label>
+                    <label class="label label-f" for="cvv">CVV:</label><br>
+                    <input type="number" name="month" id="month" class="input input-g input-tarjeta" placeholder="--" required>
+                    <input type="number" name="year" id="year" class="input input-g input-tarjeta" placeholder="----" required>
+                    <input type="text" name="cvv" id="cvv" class="input input-g input-gr input-tarjeta-g" placeholder="---" required>
+                    
+                </form>
+                <button class="btn-buy" type="submit" id="btn-buy">Buy now</button>
+                <div id="contenedor" class="contenedor">
+                    <div class="contenedor-loader">
+                      <div class="loader1"></div>
+                      <div class="loader2"></div>
+                      <div class="loader3"></div>
+                      <div class="loader4"></div>
+                    </div>
+                    <div class="cargando">Loading...</div>
+                  </div>
+                <h1 class="err-blanks" id="err-blanks">*Fill the blanks</h1>
+            </div>
+            
+        </div>
+    </div>
+    <script src="formPago.js"></script>
+</body>
+</html>

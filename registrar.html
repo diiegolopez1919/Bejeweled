@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/registrar.css">
+    <title>Regístrate - Bejeweled Shop</title>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="div-container">
+        <div id="div-header">
+            <header id="main-header">
+                <div id="div-titulo">
+                </div>
+                <div id="div-li">
+                    <ul>
+                        <li><a class="a-li" id="a-inicio" href="index.html">Inicio</a></li>
+                        <li><a class="a-li" href="incioSesion.html">Iniciar Sesión</a></li>
+                    </ul>
+                </div>
+            </header>
+        </div>
+
+        <div id="div-form">
+            <div>
+                <h1>Regístrate</h1>
+            </div>
+            <form action="" id="form" method="post">
+                <div class="form_grupo" id="grupo_nombre">
+                    <label for="nombre" class="form_label">Nombre(s):</label>
+                    <div class="div-input">
+                        <input class="input" type="text" maxlength="50" name="nombre" id="nombre" placeholder="@Diego A">
+                        <img src="assets/img/nombre.png" alt="">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="input-error">El nombre tiene que ser de 2 a 20 dígitos y solo puede contener letras.</p>
+                </div>
+
+                <div class="form_grupo" id="grupo_apellido">
+                    <label for="apellido" class="form_label">Apellido(s):</label>
+                    <div class="div-input">
+                        <input class="input" type="text" maxlength="100" name="apellido" id="apellido" placeholder="@Lopez M">
+                        <img src="assets/img/apellido.png" alt="">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="input-error">El apellido tiene que ser de 2 a 50 dígitos y solo puede contener letras.</p>
+                </div>
+                
+                <div class="form_grupo" id="grupo_fecha">
+                    <label for="fechaNac" class="form_label">Fecha de nacimiento:</label>
+                    <div class="div-input">
+                        <input class="input" type="date" name="fechaNac" id="fechaNac">
+                    </div>
+                    
+                </div>
+                
+                <div class="form_grupo" id="grupo_email">
+                    <label for="email" class="form_label">Correo electrónico:</label>
+                    <div class="div-input">
+                        <input class="input" type="email" maxlength="100" name="email" id="email" placeholder="correo@corre.mx">
+                        <img src="assets/img/email.png" alt="">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="input-error">El correo solo puede contener letras, numeros, puntos, guiones y guión bajo.</p>
+                </div>
+                
+                <div class="form_grupo" id="grupo_password">
+                    <label for="password" class="form_label">Contraseña:</label>
+                    <div class="div-input">
+                        <input class="input" type="password" name="password" maxlength="100" id="password">
+                        <img src="assets/img/contraseña.png" alt="">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="input-error">La contraseña tiene que ser de 4 a 12 digitos.</p>
+                </div>
+                
+                <div class="form_grupo" id="grupo_password2">
+                    <label for="password2" class="form_label">Confirmar contraseña:</label>
+                    <div class="div-input">
+                        <input class="input" type="password" name="password2" maxlength="100" id="password2">
+                        <img src="assets/img/contraseña.png" alt="">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="input-error">Ambas contraseñas deben ser iguales.</p>
+                </div>
+
+                <div class="form_mensaje" id="form_mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i><b>ERROR:</b> Por favor, rellene el formulario correctamente.</p>
+                    
+                </div>
+
+                <div class="form_grupo form_grupo_btn_enviar">
+                    <div class="div-input">
+                        <button type="submit" id="submit">Registrar</button>
+                    </div>
+                </div>
+                
+            </form>
+            <div id="a">
+                <a id="inicioS" href="incioSesion.html">¿Ya tienes una cuenta?, inicia sesión aquí</a>
+            </div>
+        </div>
+    </div>
+    <script src="registrar.js"></script>
+
+</body>
+</html>

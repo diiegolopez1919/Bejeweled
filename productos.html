@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/productos.css">
+    <title>Merch - Bejeweled Shop</title>
+</head>
+<body>
+    <div id="div-container">
+        <div id="div-header">
+            <header id="main-header">
+                <div id="div-titulo">
+                    <h1 class="titulo-header">Bejeweled Shop</h1>
+                </div>
+                <div id="div-li">
+                    <ul class="ul">
+                        <li class="li"><a class="a-li" href="index.html">Home</a></li>
+                        <li class="li"><a class="a-li" href="artistas.html">Artists</a></li>
+                        <li class="li"><a id="a-pedidos" class="a-li" href="pedidos.html">Orders</a></li>
+                        <li id="login-li" class="li login-li"><a class="a-li" href="incioSesion.html">Log In</a></li>
+                        <li id="reg-li" class="li login-li"><a class="a-li" href="registrar.html">Sign Up</a></li>
+                        <li class="li"><a class="a-li" id="cart-li" href="cart.html"><img id="cart-icon" src="assets/img/cart.png" alt=""><h6 class="circulo-cart" id="circulo-cart"></h6></a></li>
+                    </ul>
+                    <form id="form-header" action="index.js">
+                        <div id="div-form">
+                            <input id="buscador" type="search" name="buscador" placeholder="Search">
+                            <img id="img" src="assets/img/icono buscar.png" alt="">
+                        </div>
+                        <input id="submit" type="submit" value="Search">
+                    </form>
+                    <div id="users-div" class="users-div">
+                        <img id="img-user" src="assets/img/users.png" alt="">
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div id="div-productos">
+            <ul id="ul-user" class="ul-user">
+                <li class="li-user"><a href="profile.html">My Profile</a></li>
+                <li class="li-user"><a id="logout" href="">Log out</a></li>
+            </ul>
+            <div>
+                <h1 id="titulo">Products</h1>
+                <p>Find your favorite artist and so you can see all the merch we have.</p>
+            </div>
+            <div id="div-cont">
+
+            </div>
+        </div>
+    </div>
+    <script src="productos.js"></script>
+</body>
+</html>
