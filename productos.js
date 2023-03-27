@@ -30,18 +30,18 @@ const cargarElementos = async() => {
     separacion = window.location.href.split("=");
     id = separacion[1];
     if(id != undefined){
-        url = "http://localhost:3308/api/products/artista/"+id+""; 
+        url = "http://34.204.81.172/api/products/artista/"+id+""; 
     } else {
-        url = "http://localhost:3308/api/products/";
+        url = "http://34.204.81.172/api/products/";
     }
     
     const res = await fetch (url);
     const data = await res.json();
 
-    const resCart = await fetch("http://localhost:3308/api/cart/");
+    const resCart = await fetch("http://34.204.81.172/api/cart/");
     const dataCart = await resCart.json();
 
-    const resSate = await fetch("http://localhost:3308/api/session");
+    const resSate = await fetch("http://34.204.81.172/api/session");
     const userSessionState = await resSate.json();
 
     let idUser;
@@ -49,7 +49,7 @@ const cargarElementos = async() => {
         idUser = user.idUsuario;
     });
 
-    const resIdPedido = await fetch(`http://localhost:3308/api/venta/maxIdPedido/${idUser}`);
+    const resIdPedido = await fetch(`http://34.204.81.172/api/venta/maxIdPedido/${idUser}`);
     const dataIdPedido = await resIdPedido.json();
 
     
@@ -119,7 +119,7 @@ const logOut = (idUsuario) => {
       redirect: 'follow'
     };
   
-    fetch("http://localhost:3308/api/session/"+idUsuario, requestOptions)
+    fetch("http://34.204.81.172/api/session/"+idUsuario, requestOptions)
       .then(response => response.text())
       .then(result => console.log(result))
       .catch(error => console.log('error', error));

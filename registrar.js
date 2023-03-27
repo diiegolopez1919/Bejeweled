@@ -129,7 +129,7 @@ const ingresarDatos = (nombre, apellido, date, email, password) => {
     redirect: 'follow'
     };
 
-    fetch("http://localhost:3308/api/users", requestOptions)
+    fetch("http://34.204.81.172/api/users", requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

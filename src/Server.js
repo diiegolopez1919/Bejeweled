@@ -34,8 +34,8 @@ app.use('/api', sessionRoutes);
 app.use('/api', shippingRoutes);
 
 // routes
-app.get('/', (req,res) => {
-    res.send('Welcome to my api');
+app.get('/', (req, res)=>{
+    res.send('Wlcome to my api');
 });
 
 // mongodb connection

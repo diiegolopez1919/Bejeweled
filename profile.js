@@ -23,7 +23,7 @@ window.onload = () => {
 }
 
 const cargarElementos = async () => {
-    const resSate = await fetch("http://localhost:3308/api/session");
+    const resSate = await fetch("http://34.204.81.172/api/session");
     const userSessionState = await resSate.json();
     if (userSessionState.length > 0) {
         let idSession = "";
@@ -31,7 +31,7 @@ const cargarElementos = async () => {
             idSession = usuario.idUsuario;
         });
 
-        const res = await fetch("http://localhost:3308/api/users");
+        const res = await fetch("http://34.204.81.172/api/users");
         const users = await res.json();
 
         logOutButton.addEventListener("click", () => {
@@ -106,7 +106,7 @@ const logOut = (idUsuario) => {
         redirect: 'follow'
     };
 
-    fetch(`http://localhost:3308/api/session/${idUsuario}`, requestOptions)
+    fetch(`http://34.204.81.172/api/session/${idUsuario}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -132,7 +132,7 @@ const editarUsuario = (idUsuario, nombre, apellido, email, password, nac) => {
         redirect: 'follow'
     };
 
-    fetch(`http://localhost:3308/api/users/${idUsuario}`, requestOptions)
+    fetch(`http://34.204.81.172/api/users/${idUsuario}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -150,7 +150,7 @@ const deleteAccount = (idUsuario) => {
         redirect: 'follow'
     };
 
-    fetch(`http://localhost:3308/api/users/${idUsuario}`, requestOptions)
+    fetch(`http://34.204.81.172/api/users/${idUsuario}`, requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));

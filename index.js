@@ -26,10 +26,10 @@ const cargarElementos = async () => {
   let cont = 0;
   let cartText = document.getElementById("circulo-cart");
   
-  const resSate = await fetch("http://localhost:3308/api/session");
+  const resSate = await fetch("http://34.204.81.172/api/session");
   const userSessionState = await resSate.json();
 
-  const resCart = await fetch("http://localhost:3308/api/cart/");
+  const resCart = await fetch("http://34.204.81.172/api/cart/");
     const dataCart = await resCart.json();
 
     let idUser;
@@ -37,7 +37,7 @@ const cargarElementos = async () => {
         idUser = user.idUsuario;
     });
 
-    const resIdPedido = await fetch(`http://localhost:3308/api/venta/maxIdPedido/${idUser}`);
+    const resIdPedido = await fetch(`http://34.204.81.172/api/venta/maxIdPedido/${idUser}`);
     const dataIdPedido = await resIdPedido.json();
 
     
@@ -87,7 +87,7 @@ const logOut = (idUsuario) => {
     redirect: 'follow'
   };
 
-  fetch("http://localhost:3308/api/session/"+idUsuario, requestOptions)
+  fetch("http://34.204.81.172/api/session/"+idUsuario, requestOptions)
     .then(response => response.text())
     .then(result => console.log(result))
     .catch(error => console.log('error', error));

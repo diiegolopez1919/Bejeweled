@@ -8,14 +8,14 @@ window.onload = () => {
 }
 
 const getUsuarios = async () => {
-    const resSate = await fetch("http://localhost:3308/api/session");
+    const resSate = await fetch("http://34.204.81.172/api/session");
     const userSessionState = await resSate.json();
 
     if (userSessionState.length > 0) {
         document.getElementById("div-login").classList.add("div-login-inactivo");
         document.getElementById("cont-message-session").classList.add("cont-message-session-active");
     } else {
-        const res = await fetch("http://localhost:3308/api/users/");
+        const res = await fetch("http://34.204.81.172/api/users/");
         const data = await res.json();
         formulario.addEventListener("submit", (e) => {
             e.preventDefault();
@@ -58,7 +58,7 @@ const insertIntoSession = (idUsuario, state) => {
         redirect: 'follow'
     };
 
-    fetch("http://localhost:3308/api/session", requestOptions)
+    fetch("http://34.204.81.172/api/session", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));

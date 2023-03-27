@@ -30,13 +30,13 @@ window.onload = () => {
 
 const cargarElementos = async () => {
 
-    const resSate = await fetch("http://localhost:3308/api/session");
+    const resSate = await fetch("http://34.204.81.172/api/session");
     const userSessionState = await resSate.json();
 
-    const res = await fetch("http://localhost:3308/api/products/");
+    const res = await fetch("http://34.204.81.172/api/products/");
     const data = await res.json();
 
-    const resCart = await fetch("http://localhost:3308/api/cart/");
+    const resCart = await fetch("http://34.204.81.172/api/cart/");
     const dataCart = await resCart.json();
 
     let idUser;
@@ -44,7 +44,7 @@ const cargarElementos = async () => {
         idUser = user.idUsuario;
     });
 
-    const resIdPedido = await fetch(`http://localhost:3308/api/venta/maxIdPedido/${idUser}`);
+    const resIdPedido = await fetch(`http://34.204.81.172/api/venta/maxIdPedido/${idUser}`);
     const dataIdPedido = await resIdPedido.json();
     let maxIdPedido;
     dataIdPedido.forEach(idMax => {
@@ -122,7 +122,7 @@ const insertVenta = (idUsuario, idPedido, fecha, total) => {
         redirect: 'follow'
     };
 
-    fetch("http://localhost:3308/api/venta", requestOptions)
+    fetch("http://34.204.81.172/api/venta", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
@@ -154,7 +154,7 @@ const insertShipping = (idUsuario, country, street, postal, city, state, card, m
         redirect: 'follow'
     };
 
-    fetch("http://localhost:3308/api/shipping", requestOptions)
+    fetch("http://34.204.81.172/api/shipping", requestOptions)
         .then(response => response.text())
         .then(result => console.log(result))
         .catch(error => console.log('error', error));
